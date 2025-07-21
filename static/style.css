@@ -1,100 +1,116 @@
-body
-{
-    background: url('13041.jpg') no-repeat center center fixed;
-    background-size: 50% auto;
-    background-position: right top;
-}
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* Adjust the last value (0.5) to control the overlay opacity */
-    z-index: -1; /* Places it behind the content and the background image */
-  }
-
-.header
-{
-    background:#6900d1;
-}
-.navbar
-{
-    padding-top: 20px !important;
-}
-.nav-link
-{
-    color: white !important;
-    font-size: 16px !important;
-    padding: 0 0 5 0;
-    display: unset;
-}
-h1 {
-    font-size: 30px;
-    letter-spacing: 2px;
-    overflow: hidden; /* Hide overflow content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    border-right: 1px solid #f06102; /* Simulate a typing cursor */
-    color: white !important;
-    /* Animation properties */
-    animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
-/* Keyframes for the blinking cursor animation */
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
+.card-style {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
-.form-label
-{
+.section-title {
+    background-color: #e9ecef;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #3a3a3a;
+}
+
+textarea.form-control:focus {
+    border-color: #6900d1;
+    box-shadow: 0 0 0 2px #e0d7f7;
+}
+
+.list-group-item {
+    border: none;
+    background: transparent;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1.05rem;
+}
+.list-group-item:hover {
+    background: #f0eaff;
     color: #6900d1;
-    margin: 20px;
+    font-weight: 500;
 }
-#btn
-{
+
+.copy-btn {
+    float: right;
+    cursor: pointer;
+    color: #6c757d;
+    margin-left: 8px;
+    transition: color 0.2s;
+}
+.copy-btn:hover {
+    color: #6900d1;
+}
+
+.output-box {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
     background: #6900d1;
-    
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    transition: background 0.2s;
+}
+.btn-primary:hover {
+    background: #4b0082;
 }
 
-.col
-{
-    color: #6900d1 !important;
-    font-size: medium;
+.video-container {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
-.output
-{
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
+
+.video-container video {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    border-radius: 0.75rem;
+    border: 2px solid #e0e7ef;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: #fff;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
-.output:hover
-{
-    font-size: 20px;
-    color:#6900d1;
-    transition: linear;
-    transition-duration: 0.3s;
-    
+
+.navbar {
+    background: #111 !important;
 }
-.offcanvas-header
-{
-    color: #6900d1;
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
 }
-.clipboard:hover{
-    color: teal;
-    transition-duration: 2s;
-}
-.rules
-{
-    margin-right: 30px;
+
+@media (max-width: 768px) {
+    .card-style {
+        padding: 1rem;
+    }
+    .section-title {
+        font-size: 1rem;
+    }
+    .output-box {
+        font-size: 1rem;
+    }
 }
