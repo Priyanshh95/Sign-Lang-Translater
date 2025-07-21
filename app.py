@@ -11,6 +11,19 @@ port = 5100
 # Path to the folder containing ISL videos
 VIDEO_FOLDER = "static/videos"
 
+EXAMPLE_SENTENCES = [
+    "I am alone.",
+    "He is nervous.",
+    "She is special.",
+    "We go to school.",
+    "They are different.",
+    "You are special.",
+    "The light is yellow.",
+    "The road is narrow.",
+    "He and I are the same.",
+    "We saw a fresh chart.",
+]
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     sentence = None
@@ -42,7 +55,8 @@ def index():
         sentence=sentence,
         isl_sentence=isl_sentence,
         matched_videos=matched_videos,
-        generated_sentences=generated_sentences
+        generated_sentences=generated_sentences,
+        example_sentences=EXAMPLE_SENTENCES
     )
 
 if __name__ == "__main__":

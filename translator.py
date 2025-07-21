@@ -3,7 +3,6 @@ from nltk.stem import WordNetLemmatizer
 from spellchecker import SpellChecker
 from nltk.corpus import wordnet
 import re
-from englisttohindi.englisttohindi import EngtoHindi
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.tag import tnt
@@ -288,9 +287,9 @@ def svo_to_sov2(text):
     
     return '\n'.join(transformed_paragraphs)
 def e2h(sentence):
-    res = EngtoHindi(sentence)
-    translation = res.convert
-    return translation if translation else ''
+    # This function is no longer available as englisttohindi is removed.
+    # It will return an empty string or raise an error if called.
+    return ''
 
 def process_sentence(sentence):
     split_sentences = re.split(r';(?=(?:(?:[^"]*"){2})*[^"]*$)', sentence)
@@ -470,4 +469,4 @@ def write(output_filename):
         file.write("Data Types: " + str(data_types) + "\n")
         file.write("User Defined Types: " + str(udt) + "\n")
         file.write("Function Names: " + str(function_names) + "\n")
-print(main2("Hello I am Siddhi"))
+print("Hello Priyanshu")

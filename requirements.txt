@@ -1,0 +1,7 @@
+Flask
+Flask-RESTful
+nltk
+pyspellchecker
+translate
+torch
+transformers 

@@ -49,6 +49,24 @@
             <button type="submit" class="btn btn-primary">Process Text</button>
         </form>
 
+        <!-- Example Sentences -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h5 class="mb-0">Example Sentences</h5>
+                </div>
+                <div class="output-box">
+                    <ul class="list-group">
+                        {% for ex_sentence in example_sentences %}
+                            <li class="list-group-item" style="cursor: pointer;" onclick="setSentence('{{ ex_sentence }}')">
+                                {{ ex_sentence }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         {% if sentence %}
         <!-- Original Input and Translation -->
         <div class="row mb-4">
@@ -147,8 +165,11 @@
         </script>
         {% endif %}
         
-
-        
+        <script>
+            function setSentence(sentence) {
+                document.getElementById('sentence').value = sentence;
+            }
+        </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
