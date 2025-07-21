@@ -1,2 +1,0 @@
-file 'static/videos/accident.mp4'
-file 'static/videos/taxi.mp4'
