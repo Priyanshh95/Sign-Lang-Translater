@@ -109,7 +109,7 @@
                         // JavaScript to handle sequential playback
                         const videoElement = document.getElementById('sequentialVideo');
                         const videoSource = document.getElementById('videoSource');
-                        // List of video sources passed from Flask
+                        // The following line is a Jinja template variable and will be rendered as a JS array
                         const videoQueue = {{ matched_videos|tojson }};
                         let currentIndex = 0;
                         videoElement.addEventListener('ended', function() {

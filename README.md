@@ -35,7 +35,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The app will be available at [http://localhost:5100](http://localhost:5100)
+The app will be available at http://localhost:5100
 
 ## Usage
 - Enter your sentence in the input box.
